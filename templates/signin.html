@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Todo:Sign in</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .input_signin{
+                height:40px;
+                width:40vw;
+                border:none;
+                
+            }
+            .input_signin:focus{
+                outline:none;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container d-flex justify-content-center align-items-center mt-5 flex-column">
+            <form action="/signin" method="POST" class=" rounded shadow-lg">
+                {% csrf_token %}
+
+                <div class="m-3 mb-0 d-flex flex-column">
+                    <h1 class="fw-bold mb-3">Sign In</h1>
+
+                    <input class="input_signin border-bottom" type="text" id="username" name="username" placeholder="Enter Username">
+                    <br>
+                    <input class="input_signin border-bottom" type="password" id="pass1" name="pass1" placeholder="Enter password"><br>
+            
+                </div>
+                <button class="ms-3 mb-3 btn btn-dark" type="submit" value="Sign in" id="button">Sign In</button>
+
+            </form>
+            <div class="mt-3">Doesn't have an account? <a href="{% url 'signup' %}" class="text-decoration-none fs-5">Sign Up</a></div>
+
+        </div>
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
